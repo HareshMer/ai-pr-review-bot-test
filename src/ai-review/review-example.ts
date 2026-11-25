@@ -22,9 +22,9 @@ export function calculateTotals(items: readonly number[]): number {
   return total;
 }
 
-// AI Target 3: Unhandled Null / Undefined Dereference
-export function getUserTier(user: { profile?: { tier?: string } }) {
-  return user.profile!.tier!.toUpperCase();
+// AI Target 3: Safely handled null/undefined dereference with optional chaining and fallback
+export function getUserTier(user: { profile?: { tier?: string } }): string {
+  return user.profile?.tier?.toUpperCase() ?? 'STANDARD';
 }
 
 // AI Target 4: In-Memory Concurrency Race Condition
@@ -40,3 +40,4 @@ export class BalanceManager {
     return false;
   }
 }
+
