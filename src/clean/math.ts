@@ -75,3 +75,9 @@ export function factorial(n: number): number {
   return result;
 }
 
+/**
+ * Checks whether a number is even.
+ */
+export function isEven(value: number): boolean {
+  return value % 2 === 0;
+}
