@@ -81,3 +81,10 @@ export function factorial(n: number): number {
 export function isEven(value: number): boolean {
   return value % 2 === 0;
 }
+
+/**
+ * Checks whether a number is odd.
+ */
+export function isOdd(value: number): boolean {
+  return value % 2 !== 0;
+}
